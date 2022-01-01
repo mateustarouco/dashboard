@@ -1,0 +1,29 @@
+$primaryColor: (
+  50: #0277BD,
+  100: #0277BD,
+  200: #0277BD,
+  300: #0277BD,
+  400: #0277BD,
+  500: #0277BD,
+  600: #0277BD,
+  700: #0277BD,
+  800: #0277BD,
+  900: #0277BD,
+  contrast: (
+    50: #f1f1f1,
+    100: #f1f1f1,
+    200: #f1f1f1,
+    300: #f1f1f1,
+    400: #f1f1f1,
+    500: #f1f1f1,
+    600: #f1f1f1,
+    700: #f1f1f1,
+    800: #f1f1f1,
+    900: #f1f1f1,
+
+  )
+);
+
+$primaryLight: map-get($primaryColor , 900);
+$colorLight: #f1f1f1;
+$darkText: #313131;

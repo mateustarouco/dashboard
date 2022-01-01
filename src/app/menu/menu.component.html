@@ -1,0 +1,8 @@
+<div (mouseenter)="toggle()" (mouseleave)="toggle()" class="menu" id="menu" >
+  <div class="component" routerLink="{{menu.link}}" (mouseenter)="setEfect(menu.id)" *ngFor="let menu of menus" id="{{menu.id}}">
+    <div class="menu-content">
+      <mat-icon class="icon" svgIcon="{{menu.icon}}"></mat-icon>
+      <span class="menu-name">{{menu.name}}</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+$selectedColor: #0277BD;
+
+.container{
+  min-height: 100vh;
+  .row:nth-child(1){
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    justify-content: center;
+    .logo{
+      padding: 0;
+      margin: 20px;
+      height: 110px;
+      position: relative;
+      cursor: pointer;
+      .icon{
+        padding: 0;
+        margin: 0;
+        height: 100px;
+        width: 100px;
+        box-sizing: border-box;
+        color:#21212125;
+      }
+      .pseudo-icon{
+        overflow: hidden;
+        width: 100px;
+        height: 5px;
+        transition: .5s;
+        position: absolute;
+        top: 0;
+        border-bottom: 5px solid $selectedColor;
+        .pseudo{
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+
+    .logo:hover .pseudo-icon{
+      height: 105px;
+      color: $selectedColor!important;
+      transition: .5s;
+      animation: animation 1 ease;
+    }
+    .logo-active{
+      height: 105px!important;
+      color: $selectedColor!important;
+      transition: .5s;
+    }
+  }
+}

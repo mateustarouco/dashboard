@@ -1,0 +1,112 @@
+@import "../../assets/styles/theme";
+$detail: $colorLight;
+$primary: $primaryLight;
+
+.menu {
+  width: 60px;
+  min-height: 100vh;
+  overflow: hidden;
+  background: $primary;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  transition: .5s;
+  padding-top: 40px;
+  box-shadow: 2px 0 2px #21212150,
+  8px 0 8px #21212125,
+  16px 0 16px #21212125;
+
+
+  .component {
+    height: 50px;
+    width: 100%;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    cursor: pointer;
+    margin: 3px 0;
+
+    .menu-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $detail;
+      margin-right: 20px;
+
+      .icon {
+        min-width: 25px;
+        height: 25px;
+        margin-right: 5px;
+        padding-left: 15px;
+        box-sizing: unset;
+      }
+      .menu-name {
+        opacity: 0;
+        transform: translateX(150px);
+      }
+    }
+  }
+
+  .active {
+    box-shadow: inset 1px 1px 2px #21212150,
+                inset 3px 3px 3px #21212125,
+                inset 6px 6px 6px #21212125,
+    0 0 0 3px $primary,
+    -2px -2px 2px #d1d1d115,
+    -6px -6px 6px #d1d1d115,
+    -10px -10px 10px #d1d1d115,
+    0 2px 2px #21212120,
+    0 5px 5px #21212120,
+    0 10px 10px #21212120;
+    background: $detail;
+    animation: downModal .5s ease;
+    .menu-content {
+      color: $primary;
+    }
+
+  }
+  .toggle-config {
+    color: $detail;
+    width: 50px;
+    height: 40px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: .5s;
+  }
+}
+
+.open-menu {
+  width: 250px;
+  padding-left: 25px;
+  transition-delay: .2s;
+
+  .icon {
+    margin-right: 10px;
+  }
+
+  .menu-name {
+    transition: .5s;
+    opacity: 1!important;
+    transform: translateX(0)!important;
+  }
+}
+
+@keyframes downModal {
+  0% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
